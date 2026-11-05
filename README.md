@@ -1,2 +1,1 @@
-# dsa-practice
-Python
+Practice makes perfect.
