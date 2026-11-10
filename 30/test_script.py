@@ -28,3 +28,17 @@ def format_duration(test_name: str, duration_ms: float) -> str:
 #     print(300)
 # else:
 #     print(duration_ms)
+
+def classify_runtime(duration_ms: int | None, limit_ms: int = 500) -> str:
+    match duration_ms:
+        case None:
+            return "missing"
+        case _ if duration_ms < 0:
+            return "invalid"
+        case _ if duration_ms >= limit_ms:
+            return "slow"
+        case _: 
+            return "ok"
+
+for value in (None, -1, 0, 499, 500):
+    print(value, classify_runtime(value))
