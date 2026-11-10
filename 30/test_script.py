@@ -42,3 +42,16 @@ def classify_runtime(duration_ms: int | None, limit_ms: int = 500) -> str:
 
 for value in (None, -1, 0, 499, 500):
     print(value, classify_runtime(value))
+
+print(-7 / 2) # -3.5
+print(-7 // 2) # -4
+print(-7 % 2) # 1
+
+
+a = [1]
+b = [1]
+alias = a
+
+print(a == b) # true
+print(a is b) # false
+print(a is alias) # true
